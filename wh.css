@@ -1,0 +1,259 @@
+@import url(style.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--verdeoscuro);   
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 450px;
+    height: 90vh;
+    margin: 30px auto;
+    background-color: var(--blanco);
+    border: 1px solid #000;
+    border-radius: 22px 22px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    /*overflow: hidden;*/
+}
+
+.superior-whatsapp {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--blanco);
+    border-radius: 20px 20px 0 0;
+}
+
+.superior-whatsapp__titulo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.superior-whatsapp__iconos {
+    cursor: pointer;
+}
+
+.superior-menu {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: var(--background-color);
+    box-shadow: 0px 2px 2px #00000041;
+}
+
+.superior-menu__opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff7a;
+    cursor: pointer;
+}
+
+.superior-menu__opciones:hover {
+    background-color: var(--verdeoscuro);
+}
+
+.superior-menu__opciones--camara {
+    width: 40px;
+}
+
+.superior-menu__opciones--activo,
+.superior-menu__opciones:target {
+    border-bottom: 5px solid #fff;
+    color: #fff;
+}
+
+.superior-menu__contador {
+    display: inline-block;
+    text-align: center;
+    width: 17px;
+    height: 15px;
+    line-height: 15px;
+    background-color: #ffffff7a;
+    border-radius: 50px;
+    color: var(--verdeoscuro);
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.superior-menu__contador--activo {
+    background-color: #fff;
+}
+
+.superior-menu__contador--estados {
+    width: 10px;
+    height: 10px;
+}
+
+.content-wrapper {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.section {
+    padding: 10px;
+    display: none;
+}
+
+#chats:target,
+#estados:target,
+#llamadas:target {
+    display: block;
+}
+
+.section:not(:target) {
+    display: none;
+}
+
+#chats:not(:target) ~ #chats{
+    display: block;
+}
+
+.chat-lista__item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.chat-lista__foto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-lista__info {
+    flex-grow: 1;
+}
+
+.chat-lista__nombre {
+    font-weight: bold;
+}
+
+.chat-lista__mensaje {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.chat-lista__tiempo {
+    font-size: 0.8em;
+    color: #999;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 5px 0;
+}
+
+
+-------------
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.section--estados {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.estados__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.estado--propio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.estado__foto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.estado__info {
+    flex-grow: 1;
+}
+
+.estado__titulo {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.estado__subtitulo {
+    color: #888;
+    font-size: 14px;
+}
+
+
+.estado__acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.estado__acciones--icono {
+    font-size: 20px;
+    cursor: pointer;
+    color: #007BFF;
+}
+
+.estados--recientes, .estados--vistos {
+    margin-top: 20px;
+}
+
+.estados__titulo {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.estado__item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.estado__item:last-child {
+    border-bottom: none;
+}
+
+.estado__nombre {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.estado__tiempo {
+    color: #888;
+    font-size: 12px;
+}
+
+.estado__item:hover {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
